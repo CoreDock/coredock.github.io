@@ -2,9 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>coredock-website</title>
+
+    <title>CoreDock — Build your product. Skip the infrastructure.</title>
+    <meta
+      name="description"
+      content="Production foundation for Django + React applications. JWT auth, Docker, CI/CD, tested. One purchase, lifetime updates."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CoreDock" />
+    <meta
+      property="og:description"
+      content="Build your product. Skip the infrastructure. Production foundation for Django + React applications."
+    />
+    <!--
+      TODO before launch: render public/og_image.png (1200x630) and add an
+      absolute og:url once the final domain is registered. Social platforms
+      resolve og:image against the page URL, so this relative path only
+      works once the site is served from its real domain.
+    -->
+    <meta property="og:image" content="/og_image.png" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>
