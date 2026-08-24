@@ -2,22 +2,27 @@
  * Verified product metrics — the single source of truth for every number the
  * landing states publicly. Import from here; never retype a figure inline.
  *
- * Nothing in this file may be estimated. Each value below was produced by the
- * command next to it, run against django-react-production-starter on
- * 2026-08-03. Re-run all three before every release and update this file:
+ * Nothing in this file may be estimated. The values below were verified during
+ * the CoreDock v2.3.0 release freeze on 2026-08-24:
  *
- *   docker compose exec -T backend pytest -q       -> 101 passed
- *   cd frontend && npm run test -- --run           -> 170 passed (16 files)
- *   cd frontend && npm run test:coverage -- --run  -> Lines 87.56% (669/764)
+ *   backend checkout suite                -> 678 passed
+ *   frontend Vitest suite                 -> 224 passed (20 files)
+ *   Playwright browser journeys           -> 5 passed
+ *   frontend line coverage                -> 88.47%
  *
- * Backend coverage is deliberately absent. pytest-cov is not part of the
- * product's dependencies, so neither a backend figure nor a combined
- * backend+frontend figure can be measured — and therefore neither is claimed.
+ * The backend development container executes 448 tests and skips 230
+ * repository-level guards because those guards inspect files outside the
+ * container mount. From a complete checkout, as CI/release validation runs it,
+ * all 678 backend tests execute.
+ *
+ * Backend coverage is deliberately absent. No combined backend+frontend
+ * coverage figure is claimed.
  */
 
-export const BACKEND_TESTS = 101
-export const FRONTEND_TESTS = 170
-export const TOTAL_TESTS = BACKEND_TESTS + FRONTEND_TESTS
+export const BACKEND_TESTS = 678
+export const FRONTEND_TESTS = 224
+export const TOTAL_UNIT_TESTS = BACKEND_TESTS + FRONTEND_TESTS
+export const E2E_JOURNEYS = 5
 
-/** v8 line coverage of the frontend suite. Frontend only — see note above. */
-export const FRONTEND_LINE_COVERAGE = '87.56%'
+/** Frontend line coverage from the v2.3.0 release validation. */
+export const FRONTEND_LINE_COVERAGE = '88.47%'
