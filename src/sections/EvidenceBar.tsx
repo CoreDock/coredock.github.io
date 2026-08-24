@@ -1,13 +1,17 @@
-import { FRONTEND_LINE_COVERAGE, TOTAL_TESTS } from '../productFacts'
+import {
+  E2E_JOURNEYS,
+  FRONTEND_LINE_COVERAGE,
+  TOTAL_UNIT_TESTS,
+} from '../productFacts'
 
 /*
- * Every figure here comes from productFacts.ts, which documents the command
- * that produced it. Do not hardcode a number in this file.
+ * Every figure here comes from productFacts.ts, which documents the release
+ * validation that produced it. Do not hardcode product metrics in this file.
  */
 const METRICS = [
-  { value: String(TOTAL_TESTS), label: 'AUTOMATED TESTS' },
+  { value: String(TOTAL_UNIT_TESTS), label: 'UNIT TESTS' },
+  { value: String(E2E_JOURNEYS), label: 'BROWSER E2E JOURNEYS' },
   { value: FRONTEND_LINE_COVERAGE, label: 'FRONTEND LINE COVERAGE' },
-  { value: '1', label: 'COMMAND TO RUN' },
   { value: 'Every push', label: 'DEPENDENCY AUDIT' },
 ]
 
