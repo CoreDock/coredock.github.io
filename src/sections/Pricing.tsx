@@ -5,7 +5,7 @@ const CHECKOUT_URL =
 
 const INCLUDED = [
   'Full source code, documented',
-  'Lifetime updates via private repository',
+  'Updates included within the v2.x major version',
   'License key and invoice by email',
   'Start building the same day',
 ]
@@ -47,8 +47,8 @@ export function Pricing() {
           </a>
 
           <div className="price-note">
-            Secure checkout by Polar · One-time purchase · Lifetime updates via private GitHub
-            repository
+            Secure checkout by Polar · One-time purchase · Updates included within the v2.x major
+            version via private GitHub repository
           </div>
         </div>
       </div>
