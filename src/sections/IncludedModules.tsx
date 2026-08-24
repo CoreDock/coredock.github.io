@@ -1,5 +1,11 @@
 import type { ReactNode } from 'react'
-import { BACKEND_TESTS, FRONTEND_LINE_COVERAGE, FRONTEND_TESTS, TOTAL_TESTS } from '../productFacts'
+import {
+  BACKEND_TESTS,
+  E2E_JOURNEYS,
+  FRONTEND_LINE_COVERAGE,
+  FRONTEND_TESTS,
+  TOTAL_UNIT_TESTS,
+} from '../productFacts'
 
 type Module = {
   name: string
@@ -29,9 +35,9 @@ const MODULES: Module[] = [
     name: 'TESTING',
     body: (
       <>
-        {TOTAL_TESTS} automated tests — {BACKEND_TESTS} backend, {FRONTEND_TESTS} frontend — all
-        passing. Frontend line coverage is {FRONTEND_LINE_COVERAGE}. Ready to extend with your own
-        cases.
+        {TOTAL_UNIT_TESTS} unit tests — {BACKEND_TESTS} backend, {FRONTEND_TESTS} frontend — plus{' '}
+        {E2E_JOURNEYS} browser E2E journeys, all passing. Frontend line coverage is{' '}
+        {FRONTEND_LINE_COVERAGE}. Ready to extend with your own cases.
       </>
     ),
   },
