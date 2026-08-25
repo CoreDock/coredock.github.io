@@ -46,7 +46,15 @@ export function Pricing() {
             Buy CoreDock — $59.99
           </a>
 
-          <p className="purchase-terms">
+          <p
+            style={{
+              marginTop: '14px',
+              textAlign: 'center',
+              fontSize: '12px',
+              lineHeight: 1.5,
+              color: 'var(--steel-dark)',
+            }}
+          >
             By purchasing, you agree to the <a href="/license/">Individual License</a>,{' '}
             <a href="/terms/">Terms of Sale</a> and{' '}
             <a href="/refund-policy/">Refund Policy</a>.
