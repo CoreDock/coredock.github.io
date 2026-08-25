@@ -28,7 +28,7 @@ export function Pricing() {
           <div className="amount">{PRICE}</div>
 
           <div className="terms">
-            One-time payment · Use in unlimited personal and client projects
+            One-time payment · One named developer · Unlimited personal and client projects
           </div>
 
           <ul className="checks">
@@ -45,6 +45,12 @@ export function Pricing() {
           >
             Buy CoreDock — $59.99
           </a>
+
+          <p className="purchase-terms">
+            By purchasing, you agree to the <a href="/license/">Individual License</a>,{' '}
+            <a href="/terms/">Terms of Sale</a> and{' '}
+            <a href="/refund-policy/">Refund Policy</a>.
+          </p>
 
           <div className="price-note">
             Secure checkout by Polar · One-time purchase · Updates included within the v2.x major
