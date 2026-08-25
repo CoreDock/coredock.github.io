@@ -6,7 +6,7 @@ const CHECKOUT_URL =
 const INCLUDED = [
   'Full source code, documented',
   'Updates included within the v2.x major version',
-  'License key and invoice by email',
+  'Private repository access and invoice by email',
   'Start building the same day',
 ]
 
